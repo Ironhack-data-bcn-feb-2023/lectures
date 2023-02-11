@@ -1,7 +1,7 @@
 ## START WORKING ON THE LAB
-1. Get the link: student portal (my.ironhack.com)
+1. Get the link
 2. Fork the repo from the link
-3. Git clone OUR FORK
+3. Git clone THE FORK
 4. Open jupyter notebook: through Anaconda
 5. Work on the lab: try commands on terminal and paste them into notebook
 6. After we’re done: save and close
