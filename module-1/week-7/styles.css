@@ -1,0 +1,17 @@
+body {
+  background-color: aqua;
+}
+
+h1 {
+  color: blueviolet;
+}
+
+p {
+  color: blanchedalmond;
+}
+
+.parrafo {
+  color: brown;
+  font-weight: 600;
+  font-style: italic;
+}
