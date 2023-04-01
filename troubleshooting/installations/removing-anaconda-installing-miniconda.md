@@ -33,7 +33,7 @@ conda install -y -c conda-forge jupyter_contrib_nbextensions
 ```bash
 # 8.1. On one terminal window
 conda activate ironhack
-jupyter notebooks #this will start notebooks
+jupyter notebook #this will start notebooks
 ```
 
 ```bash
@@ -78,7 +78,7 @@ conda install -y -c conda-forge jupyter_contrib_nbextensions
 ```bash
 # 8.1. On one terminal window
 conda activate ironhack
-jupyter notebooks #this will start notebooks
+jupyter notebook #this will start notebooks
 ```
 
 ```bash
