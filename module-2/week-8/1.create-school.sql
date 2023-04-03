@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS course (
 
 -- 1. CREATE DATABASE
 -- 2. CREATE TABLES
--- 3. CREATE Relationships
+-- 3. CREATE Reluationships
 -- 4. CRUD: create, read, update, delete
 -- 4. INPUT EN LA TABLA
 
@@ -89,6 +89,62 @@ ALTER TABLE course
 	ADD FOREIGN KEY (client)  -- course.client
     REFERENCES client(client_id) -- client.client_id
     ON DELETE CASCADE;
+    
+
+CREATE TABLE takes_course (
+	participant_id INT,
+    course_id INT,
+    PRIMARY KEY (participant_id, course_id), 
+		FOREIGN KEY (participant_id) REFERENCES participant(participant_id),
+		FOREIGN KEY  (course_id)  REFERENCES  course(course_id)
+);
+
+
+-- 4. INPUT EN LA TABLA
+-- 1, Mica,  ENG, ESP, 01-01-1985, 45678, 345678
+
+-- PUT
+-- INPUT
+INSERT INTO teacher 
+VALUES (1, "Mica", "eng", "ESP", '1985-01-12', 45678, "345678");
+
+INSERT INTO teacher(teacher_id, first_name, tax_id, phone_no)
+VALUES (2, "Hugo", 45679, "3456780000");
+
+
+INSERT INTO teacher -- I need all the columns
+VALUES
+(3, "Mariona", "eng", "ESP", '1985-01-12', 45, "345678"),
+(4, "Carles", "eng", "ESP", '1985-01-12', 5678, "345678"),
+(5, "Nevan", "eng", "ESP", '1985-01-12', 345678, "345678");
+
+INSERT INTO teacher -- I need all the columns
+VALUES
+(4, "sdsdsd", "sd", "sd", '1985-01-12', 5678, "345678");
+
+-- DROP
+DELETE FROM teacher
+	WHERE teacher_id = 5;
+    
+UPDATE teacher
+    SET language_2 = "CAT"
+	WHERE teacher_id = 4;
+
+
+UPDATE teacher
+    SET language_2 = "CAT"
+	WHERE teacher_id = 4;
+
+
+
+-- 1. Crear DB
+-- 2. Crear tablas
+-- 3. Tipos de datos dentro de las tablas
+	-- variable, nulos, únicos, relaciones
+-- 4. PK, FK, (PK compuestas)
+-- 5. CREATE, READ, UPDATE, DELETE
+	
+
 
 
 
