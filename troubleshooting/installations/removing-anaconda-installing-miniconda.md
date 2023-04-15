@@ -14,7 +14,7 @@ conda init zsh
 
 ```bash
 # 4. Create environment
-conda create -y -n ironhack
+conda create -n ironhack
 conda activate -y ironhack
 
 # 5. Install jupyter notebooks
@@ -59,7 +59,7 @@ conda init bash
 
 ```bash
 # 4. Create environment
-conda create -y -n ironhack
+conda create -n ironhack
 conda activate -y ironhack
 
 # 5. Install jupyter notebooks
