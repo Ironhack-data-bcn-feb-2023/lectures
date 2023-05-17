@@ -4,3 +4,5 @@
 .vscode
 **/*mt.ipynb
 **/*mt
+.env
+**/*.env
