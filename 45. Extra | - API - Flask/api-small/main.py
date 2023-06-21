@@ -1,8 +1,23 @@
-from flask import Flask
+from flask import Flask, request
 import random
 import queries.the_queries as query
 
 app = Flask(__name__)
+
+@app.route("/hello")
+def greeting_language():
+    params = request.args
+    language = params["language"]
+
+    if language == "eng":
+        return "Hello!"
+    elif language == "esp":
+        return "Hola!"
+    
+@app.route("/insert/<table>")
+def inserting (table):
+    query.insert_into_table(table, request.args)
+    return "Inserted!"
 
 @app.route("/get_todo/<table>/<limit>")
 def get_table (table, limit): 
