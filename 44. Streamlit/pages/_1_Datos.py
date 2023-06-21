@@ -1,6 +1,7 @@
 from queries.sql_queries import query_employees
 import streamlit as st
 
+st.selectbox("Selecciona tabla: ", ["salaries", "employees", "departments"])
 df = query_employees("salaries")
 st.dataframe(df)  # Same as st.write(df)
 
